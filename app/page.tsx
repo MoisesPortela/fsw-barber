@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "./_components/ui/button"
-
-export default function Home() {
+const Home = () => {
   return <Button>test</Button>
 }
+export default Home
