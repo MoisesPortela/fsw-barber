@@ -6,6 +6,7 @@ import { Card, CardContent } from "./ui/card"
 interface ServiceItemProps {
   service: BarbershopService
 }
+
 const ServiceItem = ({ service }: ServiceItemProps) => {
   return (
     <Card>
@@ -20,7 +21,7 @@ const ServiceItem = ({ service }: ServiceItemProps) => {
           />
         </div>
         {/* DIREITA */}
-        <div className="flex flex-col space-y-2">
+        <div className="min-w-[340px] space-y-2">
           <h3 className="text-sm font-semibold">{service.name}</h3>
           <p className="text-sm text-gray-400">{service.description}</p>
           {/* PREÇO E BOTÃO */}
@@ -31,6 +32,7 @@ const ServiceItem = ({ service }: ServiceItemProps) => {
                 currency: "BRL",
               }).format(Number(service.price))}
             </p>
+
             <Button variant="secondary" size="sm">
               Reservar
             </Button>
