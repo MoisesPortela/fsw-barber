@@ -17,7 +17,7 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
         searchParams.title
           ? {
               name: {
-                contains: searchParams?.service,
+                contains: searchParams?.title,
                 mode: "insensitive",
               },
             }
@@ -27,7 +27,7 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
               services: {
                 some: {
                   name: {
-                    contains: searchParams?.service,
+                    contains: searchParams.service,
                     mode: "insensitive",
                   },
                 },
