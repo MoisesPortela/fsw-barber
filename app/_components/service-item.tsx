@@ -53,7 +53,7 @@ const getTimeList = (bookings: Booking[]) => {
   return TIME_LIST.filter((time) => {
     const hour = Number(time.split(":")[0])
     const minutes = Number(time.split(":")[1])
-
+    //const isTimeInThePast = new Date() > set(new Date(), { hours: hour, minutes })
     const hasBookingOnCurrentTime = bookings.some(
       (booking) =>
         booking.date.getHours() === hour &&
