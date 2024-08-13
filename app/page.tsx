@@ -109,7 +109,7 @@ const Home = async () => {
           {confirmedbookings.map((confirmedbookings) => (
             <BookingItem
               key={confirmedbookings.id}
-              booking={confirmedbookings}
+              booking={JSON.parse(JSON.stringify(confirmedbookings))}
             />
           ))}
         </div>
@@ -119,7 +119,10 @@ const Home = async () => {
         </h2>
         <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
           {barbershops.map((barbershop) => (
-            <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+            <BarbershopItem
+              key={barbershop.id}
+              barbershop={JSON.parse(JSON.stringify(barbershop))}
+            />
           ))}
         </div>
         {/* POPULARES */}
